@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+    <h1>Formulário de cadastro</h1>
+
+    <div class="form-wrapper">
+        <div class="row">
+            <div class="field full">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
+                <span class="error-msg" id="err-nome"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="field grow2">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="nome@dominio.com">
+                <span class="error-msg" id="err-email"></span>
+            </div>
+            <div class="field grow1">
+                <label for="dtNascimento">Data de Nascimento:</label>
+                <input type="date" name="dtNascimento" id="dtNascimento">
+                <span class="error-msg" id="err-dtNascimento"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="field grow1">
+                <label for="telefone">Telefone Fixo:</label>
+                <input type="text" name="telefone" id="telefone" placeholder="(99)9999-9999" maxlength="13">
+                <span class="error-msg" id="err-telefone"></span>
+            </div>
+            <div class="field grow1">
+                <label for="celular">Telefone Celular:</label>
+                <input type="text" name="celular" id="celular" placeholder="(99)99999-9999" maxlength="14">
+                <span class="error-msg" id="err-celular"></span>
+            </div>
+            <div class="radio-group">
+                <label><input type="radio" name="perfil" value="professor" id="rProfessor" checked> Professor</label>
+                <label><input type="radio" name="perfil" value="aluno" id="rAluno"> Aluno</label>
+            </div>
+        </div>
+
+        <div class="campos-professor">
+            <div class="row">
+                <div class="field grow1">
+                    <label for="area">Área:</label>
+                    <input type="text" name="area" id="area" placeholder="Digite sua área de atuação">
+                    <span class="error-msg" id="err-area"></span>
+                </div>
+                <div class="field grow1">
+                    <label for="matriculaProf">Matrícula:</label>
+                    <input type="text" name="matriculaProf" id="matriculaProf" placeholder="Digite sua matrícula" maxlength="5">
+                    <span class="error-msg" id="err-matriculaProf"></span>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="field full">
+                    <label for="lattes">Lattes:</label>
+                    <input type="text" name="lattes" id="lattes" placeholder="Digite aqui o endereço para seu Lattes">
+                    <span class="error-msg" id="err-lattes"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="campos-aluno" style="display: none;">
+            <div class="row">
+                <div class="field grow1">
+                    <label for="curso">Curso:</label>
+                    <input type="text" name="curso" id="curso" placeholder="Digite seu curso">
+                    <span class="error-msg" id="err-curso"></span>
+                </div>
+                <div class="field grow1">
+                    <label for="matriculaAluno">Matrícula:</label>
+                    <input type="text" name="matriculaAluno" id="matriculaAluno" placeholder="Digite sua matrícula" maxlength="10">
+                    <span class="error-msg" id="err-matriculaAluno"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-row">
+            <button id="btnEnviar">Enviar</button>
+            <button id="btnRedefinir">Redefinir</button>
+        </div>
+ 
+        <div id="success-msg">
+            <p>Cadastro realizado com sucesso!</p>
+            <pre id="success-data"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
